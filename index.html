@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps Arsita Nurfauziah</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+	<link rel="index" type="html" href="./index.html">
+</head>
+<body>
+
+<!-- Header Start -->
+<header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+</header>
+<!-- Header End -->
+
+<!-- Body Start -->
+<main>
+    <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+            <div class="input" id="sectionTitle">
+                <label for="inputBookTitle">Judul</label>
+                <input id="inputBookTitle" type="text" placeholder="Masukkan judul buku" required>
+                <small class="error-display" id="errorTitle">*Wajib Diisi</small>
+            </div>
+            <div class="input" id="sectionAuthor">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text" placeholder="Masukkan nama penulis buku" required>
+                <small class="error-display" id="errorAuthor">*Wajib Diisi</small>
+            </div>
+            <div class="input" id="sectionYear">
+                <label for="inputBookYear">Tahun</label>
+                <input id="inputBookYear" type="number" placeholder="Masukkan tahun terbit buku" required>
+                <small class="error-display" id="errorYear">*Wajib Diisi</small>
+            </div>
+            <div class="input_inline">
+                <label for="inputBookIsComplete">Selesai dibaca</label>
+                <input id="inputBookIsComplete" type="checkbox">
+            </div>
+            <button id="bookSubmit" type="submit"><img class="add-icon" style="top:10px;" src="./image/add-icon.png" alt="add-icon">&nbsp; Masukan Buku ke rak <span>Belum selesai dibaca</span></button>
+        </form>
+    </section>
+
+    <section class="search_section" id="searchSection">
+        <h2>Cari Buku (Opsional)</h2>
+        <form id="searchBook">
+            <label for="searchBookTitle">Judul</label>
+            <input id="searchBookTitle" type="text" placeholder="Pencarian Buku"/>
+            <button id="searchSubmit" type="submit"><img class="search-icon" style="top:10px;" src="./image/search-icon.png" alt="search-icon">&nbsp;
+            <span>Cari</span></button>
+        </form>
+
+        <div id="searchResult" class="book_list" style="width: 100%"></div>
+    </section>
+
+    <section class="book_shelf" id="bookShelfIncompleted">
+        <h2 id="incompletedH2">Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list">
+            <!-- <article class="book_item">
+                <h3>Book Title</h3>
+                <p>Penulis: John Doe</p>
+                <p>Tahun: 2002</p>
+                
+                <div class="action">
+                    <button class="green">Selesai dibaca</button>
+                    <button class="red">Hapus buku</button>
+                </div>
+            </article> -->
+        </div>
+    </section>
+
+    <section class="book_shelf" id="booksShelfCompleted">
+        <h2 id="completedH2">Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list">
+            <!-- <article class="book_item">
+                <h3>Book Title</h3>
+                <p>Penulis: John Doe</p>
+                <p>Tahun: 2002</p>
+                
+                <div class="action">
+                    <button class="green">Selesai dibaca</button>
+                    <button class="red">Hapus buku</button>
+                </div>
+            </article> -->
+        </div>
+    </section>
+</main>
+</body>
+<!-- Body End -->
+
+<!-- Footer Start -->
+<footer>
+    <article class="container-footer">
+        <table>
+            <tr>
+                <td class="cf-left">
+                    Copyright © 2022 | All rights Reserved Bookshelf Apps
+                </td>
+            </tr>
+        </table>
+    </article>
+</footer>
+<!-- Footer End -->
+
+<script src="./main.js"></script>
+<script src="./crud.js"></script>
+<script src="./search.js"></script>
+<script src="./swap.js"></script>
+
+</html>
